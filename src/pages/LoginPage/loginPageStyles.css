@@ -40,12 +40,12 @@ font-family: 'Sofia Sans', sans-serif;
     justify-content: center;
     align-items: center;
 }
-.rightSide p{
+.rightSide > p{
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 20px;
 }
-.leftSide > p{
+.loginTitle{
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 20px;
@@ -60,4 +60,13 @@ font-family: 'Sofia Sans', sans-serif;
     background-color: #934EC0;
     color: white;
     border-radius: 8px;
+}
+.forgotPasswordButton{
+    color: #7F7F7F;
+    font-size: 12px;
+}
+
+.registerButton{
+    color: #7F7F7F;
+    font-size: 12px;
 }

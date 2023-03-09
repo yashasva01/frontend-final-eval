@@ -5,9 +5,27 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 function LoginPage({isLoggedIn, setIsLoggedIn}) {
+    const [isRegister , setIsRegister] = React.useState(true);
+    function  handleRegister () {
+        setIsRegister(!isRegister);
+    }
     const navigate = useNavigate();
     const [email, setEmail] = React.useState("");
     const [password, setPassword] = React.useState("");
+    async function createNewUser() {
+        const response = await axios.post('http://localhost:3001/api/users/register', {
+            "userEmail":email,
+            "password":password
+        });
+        if (response.data === 'User created successfully'){
+            setEmail("");
+            setPassword("")
+            setIsRegister(!isRegister);
+        }else {
+            alert(response.data);
+        }
+    }
+
     async function handleLogin() {
         const response = await axios.post('http://localhost:3001/api//users/login', {
             "userEmail":email,
@@ -25,7 +43,7 @@ function LoginPage({isLoggedIn, setIsLoggedIn}) {
                 <img src={initImage} alt ="the init" className="loginPageImage"/>
             </div>
             <div className="leftSide">
-                <p>Login to your CMS+ account</p>
+                <p className="loginTitle">Login to your CMS+ account</p>
                     <label for="email">Email</label><br/>
                     <input 
                         type="text" id="email"
@@ -36,11 +54,14 @@ function LoginPage({isLoggedIn, setIsLoggedIn}) {
                     <br/>
                     <label for="password">Password</label><br/>
                     <input 
-                        type="text" id="password" 
+                        id="password" type="password" 
                         name="password" value={password} 
                         onChange={(e) => setPassword(e.target.value)}/>
                     <br /><br />
-                    <button type="button" className="submitButton" onClick={() => handleLogin()}>Login</button>
+                    {(isRegister) ? <button type="button" className="submitButton" onClick={() => handleLogin()}>Login</button>:
+                    <button type="button" className="submitButton" onClick={() => createNewUser()}>Register</button>}
+                    <p className="forgotPasswordButton"> Forgot Password ? </p>
+                    <p className="registerButton" onClick={handleRegister}> {(isRegister) ? 'New Here, Register Now' : 'Back to login'}</p>
             </div>
         </div>
     );
