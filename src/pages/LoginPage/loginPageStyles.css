@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Display:wght@400;700;800&family=Big+Shoulders+Text:wght@700&family=Sofia+Sans:ital,wght@0,200;0,400;1,400&display=swap');
+
+
+.loginPage {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f5f5f5;
+    font-family: 'Big Shoulders Inline Display', cursive;
+font-family: 'Big Shoulders Text', cursive;
+font-family: 'Sofia Sans', sans-serif;
+}
+.loginPageImage{
+    width: 450px;
+    height: 450px;
+    margin-bottom: 20px;
+}
+.rightSide{
+    flex: 4;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.leftSide{
+    flex: 3;
+    height: 100%;
+    width: 40%;
+    background-color: #393939 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rightSide p{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.leftSide > p{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.leftSide label{
+    color: #7F7F7F;
+}
+.submitButton{
+    width: 146px;
+    height: 30px;
+    background-color: #934EC0;
+    color: white;
+    border-radius: 8px;
+}

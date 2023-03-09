@@ -1,0 +1,54 @@
+.home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100vw;
+}
+
+.collectionType{
+    flex: 2;
+    height: 100vh;
+    background-color: #393939;
+    color: white;
+}
+.heading{
+    height: 8%;
+    background-color: #703099;
+    color: white;
+}
+.heading h1{
+    padding: 17px 30px;
+    font-weight: 500;
+}
+.content{
+    height: 100vh;
+    flex: 6;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+}
+.contentHeader{
+    background-color: white;
+    height: 8%;
+}
+.contentHeader h1{
+    padding: 17px 30px;
+    font-weight: 500;
+}
+.ContentMaker{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.contentType{
+    flex: 1;
+    background-color: red;
+    height: 100%;
+}
+.contentField{
+    flex: 3;
+    background-color: green;
+    height: 100%;
+}
