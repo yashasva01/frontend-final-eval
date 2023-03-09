@@ -14,6 +14,7 @@ function LoginPage({isLoggedIn, setIsLoggedIn}) {
             "password":password
         });
         response.data.token ? setIsLoggedIn(true) : setIsLoggedIn(false);
+        localStorage.setItem('x-access-token', response.data.token);
         (isLoggedIn) ? navigate('/home') : navigate('/');
     }
     return (

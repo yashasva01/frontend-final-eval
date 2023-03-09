@@ -1,0 +1,16 @@
+.contentBuilderBody{
+    height: 100%;
+    background-color: aliceblue;
+    padding: 3% 8%;
+}
+
+.contentDetails{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#addEntry{
+    color:#703099;
+    font-size: 30px;
+}

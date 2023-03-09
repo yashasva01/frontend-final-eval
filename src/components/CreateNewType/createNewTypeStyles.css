@@ -1,0 +1,86 @@
+.addNewType{
+    border: 3px solid ;
+    height: 55px;
+    width: 90%;
+    Border-radius: 10px;
+    border-style: dotted;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px;
+    background-color: #e9eaf2;
+    color:#8973db;
+}
+
+.searchType{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.searchType p{
+    margin: 10px 0px;
+}
+.searchType img {
+height: 25px;
+    width: 25px;
+    margin: 7px 10px;
+}
+.type{
+    height: 55px;
+    width: 90%;
+    Border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+    color: ab9ddd
+}
+
+.modalDiv{
+    width: 100%;
+    color: grey;
+    padding: 10px;
+}
+.buttonContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 10px 0px;
+    padding: 10px;
+}
+.cancelButton {
+    padding: 5px 10px;
+    margin: 0px 10px;
+    width: 110px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid white;
+}
+.inputContainer{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.inputContainer p{
+    padding: 10px 0px;
+    color: #AFAFAF;
+
+}
+.createButton{
+    padding: 5px 10px;
+    margin: 0px 10px;
+    width: 110px;
+    background-color: #8973db;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #8973db;
+}
+.contentTypeInput{
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
