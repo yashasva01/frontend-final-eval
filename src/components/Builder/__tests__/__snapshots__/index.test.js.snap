@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Builder should render correctly 1`] = `
+<div>
+  <div
+    class="content"
+  >
+    <div
+      class="contentHeader"
+    >
+       
+      <h1>
+         Content Types 
+      </h1>
+       
+    </div>
+    <div
+      class="ContentMaker"
+    >
+      <div
+        class="contentType"
+      >
+        <div
+          class="searchType"
+        >
+          <p>
+            4 Types
+          </p>
+          <img
+            alt="searchIcon"
+            src="icon-search-dark.png"
+          />
+        </div>
+        <div
+          class="addNewType"
+        >
+          <p>
+             + NEW TYPE 
+          </p>
+        </div>
+        <div
+          class="type"
+        >
+          <p
+            class="contentTypeName"
+          >
+            Location
+          </p>
+          <p
+            class="contentInstancesName"
+          >
+             
+            0
+             
+          </p>
+        </div>
+        <div
+          class="type"
+        >
+          <p
+            class="contentTypeName"
+          >
+            Hotel
+          </p>
+          <p
+            class="contentInstancesName"
+          >
+             
+            0
+             
+          </p>
+        </div>
+        <div
+          class="type"
+        >
+          <p
+            class="contentTypeName"
+          >
+            Flight
+          </p>
+          <p
+            class="contentInstancesName"
+          >
+             
+            0
+             
+          </p>
+        </div>
+        <div
+          class="type"
+        >
+          <p
+            class="contentTypeName"
+          >
+            Car
+          </p>
+          <p
+            class="contentInstancesName"
+          >
+             
+            0
+             
+          </p>
+        </div>
+      </div>
+      <div
+        class="contentField"
+      >
+        <div
+          class="contentField__header"
+        >
+          <h2
+            class="contentField__title"
+          >
+             
+            Location
+             
+          </h2>
+          <img
+            alt="edit logo"
+            src="user-edit-text-message-note.png"
+          />
+        </div>
+        <p>
+           
+          0
+           Fields 
+        </p>
+        <div
+          class="fieldAdder"
+        >
+          <div
+            class="addNewField"
+          >
+            <p>
+               Add Another Field 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

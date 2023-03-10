@@ -37,6 +37,7 @@ function Home() {
       {
         (collectionTypes.length === 0) ?  <div className="blank"> </div> : <Builder collectionTypes={collectionTypes} setCollectionTypes={setCollectionTypes} /> 
       }     
+      {/* <Builder collectionTypes={collectionTypes} setCollectionTypes={setCollectionTypes} />  */}
     </div>
   );
 }
