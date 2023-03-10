@@ -4,7 +4,6 @@ import CollectionList from '../../components/CollectionList';
 import ContentTypeBuilder from '../../components/ContentTypeBuilder';
 import Builder from '../../components/Builder';
 import Header from '../../components/Heading';
-// import makeRequest from '../../utils/makeRequest';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
@@ -37,7 +36,6 @@ function Home() {
       {
         (collectionTypes.length === 0) ?  <div className="blank"> </div> : <Builder collectionTypes={collectionTypes} setCollectionTypes={setCollectionTypes} /> 
       }     
-      {/* <Builder collectionTypes={collectionTypes} setCollectionTypes={setCollectionTypes} />  */}
     </div>
   );
 }

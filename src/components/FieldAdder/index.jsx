@@ -47,7 +47,6 @@ function FieldAdder({currentType, setCurrentType}) {
     }, { headers:{
       'x-access-token':localStorage.getItem('x-access-token')
     }});
-    // await axios.post('',{}, {});
     setFieldData(fieldData.filter((field) => field !== item));
   } 
 

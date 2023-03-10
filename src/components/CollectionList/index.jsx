@@ -4,10 +4,6 @@ import './collectionListStyles.css';
 
 
 function CollectionList({collectionTypes, setCollectionTypes, currentCollection, setCurrentCollection }) {
-  // data from back end
-  // console.log(collectionList);
-    
-  // const collectionList = ["comapny", "hotel", "location"]
   function onItemClick(item) {
     setCurrentCollection(item);
   }

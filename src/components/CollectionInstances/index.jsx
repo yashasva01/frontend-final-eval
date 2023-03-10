@@ -45,7 +45,6 @@ function CollectionInstances({currentCollection, setCurrentCollection, instances
   };
 
   const onSubmit = (data) => {
-    // console.log(data);
     makeCreaetEntryRequest(data);
   };
 
@@ -104,7 +103,6 @@ function CollectionInstances({currentCollection, setCurrentCollection, instances
                 <div className='formControl'>
                   <button className='cancelButton' onClick={() => setModalOpen(false)}> Cancel </button>
                   <button type='submit' className='addButton'> Add </button>
-                  {/* onClick={() => setModalOpen(false)} */}
                 </div>
               </form>
               
