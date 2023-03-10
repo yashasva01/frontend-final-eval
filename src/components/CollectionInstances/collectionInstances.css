@@ -18,3 +18,18 @@
     color: grey;
     font-size: 30px;
 }
+.addButton{
+    background-color: #703099;
+    color: white;
+    border-radius: 5px;
+    padding: 3px 48px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.inputForEntries{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+}

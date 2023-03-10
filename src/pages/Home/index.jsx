@@ -14,12 +14,12 @@ function Home() {
 
   async function getDataAndSet() {
     const response = await axios.get('http://localhost:3003/api/getAllContentType', { headers:{
-       'x-access-token':localStorage.getItem('x-access-token')
+      'x-access-token':localStorage.getItem('x-access-token')
     }});
     setCollectionTypes(response.data.data);
   }
   React.useEffect(() => {
-      getDataAndSet()
+    getDataAndSet();
   }, []);
 
 
@@ -35,7 +35,7 @@ function Home() {
         </div>
       </div>
       {
-      (collectionTypes.length === 0) ?  <div className="blank"> </div> : <Builder collectionTypes={collectionTypes} setCollectionTypes={setCollectionTypes} /> 
+        (collectionTypes.length === 0) ?  <div className="blank"> </div> : <Builder collectionTypes={collectionTypes} setCollectionTypes={setCollectionTypes} /> 
       }     
     </div>
   );

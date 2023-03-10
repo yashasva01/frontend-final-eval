@@ -38,8 +38,8 @@ function ContentLadder({instances, setInstances, currentCollection}) {
             {
               instances.map((instance, index) => {
                 return (
-                  <EntryAdder intsance={instance} key={index} index={index} currentCollection={currentCollection} 
-                    count={count} setCount={setCount} fields={fields} setFields={setFields}/>
+                  <EntryAdder intsance={instance} key={index} index={index} currentCollection={currentCollection} id={instance.instanceName}
+                    setInstances={setInstances}/>
                 );
               })
             }

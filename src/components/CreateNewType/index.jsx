@@ -21,6 +21,18 @@ function CreateNewType({collectionTypes, setCollectionTypes, currentType, setCur
 
   const [modalOpen, setModalOpen] = React.useState(false);
   const [newType, setNewType] = React.useState('');
+
+  async function getNumberOfInstances(item) {
+    const response = await axios.post('http://localhost:3003/api/getAllInstancesOfContentType', {
+      'contentType': item,
+    } ,{ headers:{
+      'x-access-token':localStorage.getItem('token')
+    }});
+    // console.log(response.data.data);
+    return (response.data.data.length);
+    // return response.data.data.length;
+  }
+
   React.useEffect(() => {
   }, [collectionTypes]);
   async function addContentType() {
@@ -66,9 +78,13 @@ function CreateNewType({collectionTypes, setCollectionTypes, currentType, setCur
       </Modal>
       {
         collectionTypes.map((item, index) => {
+          getNumberOfInstances(item).then((value) => {
+            console.log(value);
+          });
           return (
             <div className="type" key={index} onClick={() => handleTypeClick(item)}>
-              <p>{item}</p>
+              <p className="contentTypeName">{item}</p>
+              <p className="contentInstancesName"> 5 </p>
             </div>
           );
         })
