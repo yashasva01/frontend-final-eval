@@ -7,13 +7,13 @@ function Builder({collectionTypes, setCollectionTypes}) {
   React.useEffect(() => {
   }, [collectionTypes]);
   return (
-     <div className="content"> 
-        <div className="contentHeader"> <h1> Content Types </h1> </div>
-        <div className="ContentMaker">  
-          <CreateNewType collectionTypes={collectionTypes} setCollectionTypes={setCollectionTypes} 
+    <div className="content"> 
+      <div className="contentHeader"> <h1> Content Types </h1> </div>
+      <div className="ContentMaker">  
+        <CreateNewType collectionTypes={collectionTypes} setCollectionTypes={setCollectionTypes} 
           currentType={currentType} setCurrentType={setCurrentType}/>
-          <FieldAdder currentType={currentType} setCurrentType={setCurrentType}/>
-        </div> 
+        <FieldAdder currentType={currentType} setCurrentType={setCurrentType}/>
+      </div> 
     </div>
   );
 }

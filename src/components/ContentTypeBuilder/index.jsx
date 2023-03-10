@@ -7,7 +7,7 @@ function ContentTypeBuilder() {
 
   return (
     <div className="contentTypeBuilder">
-      <p onClick={function(event){navigate('/home') } }> CONTENT TYPE BUILDER </p>
+      <p onClick={function(event){navigate('/home'); } }> CONTENT TYPE BUILDER </p>
     </div>
   );
 }

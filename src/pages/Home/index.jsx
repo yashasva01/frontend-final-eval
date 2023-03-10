@@ -6,8 +6,10 @@ import Builder from '../../components/Builder';
 import Header from '../../components/Heading';
 // import makeRequest from '../../utils/makeRequest';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+  const navigate = useNavigate();
   const [collectionTypes, setCollectionTypes] = React.useState([]);
 
   async function getDataAndSet() {
@@ -25,8 +27,8 @@ function Home() {
     <div className="home">
       <div className="collectionType"> 
         <Header/>
-        <div className="collectionList">
-          <CollectionList />
+        <div className="collectionList" onClick={() => navigate('/collections')} >
+          <CollectionList collectionTypes={collectionTypes} setCollectionTypes={collectionTypes}/>
         </div>
         <div className="contentTypeBuilder">
           <ContentTypeBuilder />
