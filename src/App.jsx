@@ -12,11 +12,11 @@ function App() {
 
   async function getCollectionList() {
     const response = await axios.get('http://localhost:3003/api/getAllContentType', {
-        headers: {
-            'x-access-token': localStorage.getItem('x-access-token')
-    }});
+      headers: {
+        'x-access-token': localStorage.getItem('x-access-token')
+      }});
     setCollectionTypes(response.data.data);
-}
+  }
 
   React.useEffect(() => {
     getCollectionList();
@@ -27,8 +27,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Loginpage isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}></Loginpage>} />
-        <Route path="/home" element={<Home collectionTypes={collectionTypes} setCollectionTypes={setCollectionTypes}></Home>} />
-         <Route path="/collections" element={<Collections collectionTypes={collectionTypes} setCollectionTypes={setCollectionTypes}></Collections>} />
+        {isLoggedIn && <Route path="/home" element={<Home collectionTypes={collectionTypes} setCollectionTypes={setCollectionTypes}></Home>} />}
+        {isLoggedIn && <Route path="/collections" element={<Collections collectionTypes={collectionTypes} setCollectionTypes={setCollectionTypes}></Collections>} />}
         <Route path="*" element={<h1>404: Not Found</h1>} />
       </Routes>
     </BrowserRouter>

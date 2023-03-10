@@ -3,6 +3,7 @@ import './createNewTypeStyles.css';
 import searchIcon from '../../assets/icons/icon-search-dark_2023-03-09/icon-search-dark.png';
 import Modal from 'react-modal';
 import axios from 'axios';
+import TypeList from '../TypeList';
 const customStyles = {
   content: {
     top: '50%',
@@ -22,16 +23,7 @@ function CreateNewType({collectionTypes, setCollectionTypes, currentType, setCur
   const [modalOpen, setModalOpen] = React.useState(false);
   const [newType, setNewType] = React.useState('');
 
-  async function getNumberOfInstances(item) {
-    const response = await axios.post('http://localhost:3003/api/getAllInstancesOfContentType', {
-      'contentType': item,
-    } ,{ headers:{
-      'x-access-token':localStorage.getItem('token')
-    }});
-    // console.log(response.data.data);
-    return (response.data.data.length);
-    // return response.data.data.length;
-  }
+
 
   React.useEffect(() => {
   }, [collectionTypes]);
@@ -78,14 +70,8 @@ function CreateNewType({collectionTypes, setCollectionTypes, currentType, setCur
       </Modal>
       {
         collectionTypes.map((item, index) => {
-          getNumberOfInstances(item).then((value) => {
-            console.log(value);
-          });
           return (
-            <div className="type" key={index} onClick={() => handleTypeClick(item)}>
-              <p className="contentTypeName">{item}</p>
-              <p className="contentInstancesName"> 5 </p>
-            </div>
+            <TypeList setCurrentType={setCurrentType} id={item} key={index}/>
           );
         })
       }

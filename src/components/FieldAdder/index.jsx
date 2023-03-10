@@ -22,6 +22,7 @@ const customStyles = {
 
 function FieldAdder({currentType, setCurrentType}) {
 
+  const [numCount, setNumCount] = React.useState(0);
   const [modalOpen, setModalOpen] = React.useState(false);
   const [newField, setNewField] = React.useState('');
   const [fieldData, setFieldData] = React.useState([]);
@@ -46,8 +47,21 @@ function FieldAdder({currentType, setCurrentType}) {
     }, { headers:{
       'x-access-token':localStorage.getItem('x-access-token')
     }});
+    // await axios.post('',{}, {});
     setFieldData(fieldData.filter((field) => field !== item));
   } 
+
+
+  async function getNumberOfInstances(currentType){
+    const response = await axios.post('http://localhost:3003/api/getAllInstancesOfContentType', {
+      'contentType': currentType,
+    } ,{ headers:{
+      'x-access-token':localStorage.getItem('token')
+    }});
+    setNumCount(response.data.data.length);
+  }
+
+
   async function getAllFields() {
     const response = await axios.post('http://localhost:3003/api/getContentField', {
       'name': currentType
@@ -59,6 +73,7 @@ function FieldAdder({currentType, setCurrentType}) {
 
   React.useEffect(() => {
     getAllFields();
+    getNumberOfInstances(currentType);
   }, [currentType]);
 
   return (
@@ -67,7 +82,7 @@ function FieldAdder({currentType, setCurrentType}) {
         <h2 className="contentField__title"> {currentType} </h2>
         <img src={editLogo} alt="edit logo"/>
       </div>
-      <p> Count Of Instances </p>
+      <p> {numCount} Fields </p>
       <div className="fieldAdder">
         <div className="addNewField" onClick={setModalOpen}>
           <p> Add Another Field </p>
@@ -93,7 +108,7 @@ function FieldAdder({currentType, setCurrentType}) {
             return (
               <div className="field" key={index}>
                 <div className="typeTag">
-                                    AB
+                  AB
                 </div>
                 <p>{item}</p>
                 <p> TEXT </p>
